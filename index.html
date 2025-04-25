@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio avec Carrousel et Rubriques</title>
+    <title>Portfolio avec Bouton Retour</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -34,6 +34,19 @@
             margin: 20px auto;
             padding: 20px;
             text-align: center;
+        }
+        .back-to-top {
+            display: inline-block;
+            margin: 20px auto;
+            padding: 10px 15px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .back-to-top:hover {
+            background-color: #555;
         }
         .carousel {
             position: relative;
@@ -89,15 +102,18 @@
             <button class="prev">&lt;</button>
             <button class="next">&gt;</button>
         </div>
+        <a href="#top" class="back-to-top">Retour vers le haut</a>
     </section>
     <section id="about">
         <h2>À Propos</h2>
         <p>Je suis un professionnel passionné par le développement, la conception et l'innovation.</p>
+        <a href="#top" class="back-to-top">Retour vers le haut</a>
     </section>
     <section id="resume">
         <h2>CV</h2>
         <p>Expérience : Développeur Web chez XYZ, 2020 - Présent.</p>
         <p>Éducation : Master en Informatique, Université ABC, 2018.</p>
+        <a href="#top" class="back-to-top">Retour vers le haut</a>
     </section>
     <section id="services">
         <h2>Services</h2>
@@ -106,13 +122,15 @@
             <li>Design moderne et intuitif</li>
             <li>Optimisation SEO</li>
         </ul>
+        <a href="#top" class="back-to-top">Retour vers le haut</a>
     </section>
     <section id="contact">
         <h2>Contact</h2>
         <p>Email : votreemail@example.com</p>
         <p>Téléphone : +123456789</p>
+        <a href="#top" class="back-to-top">Retour vers le haut</a>
     </section>
-    <footer>
+    <footer id="top">
         <p>&copy; 2025 Mon Portfolio</p>
     </footer>
     <script>

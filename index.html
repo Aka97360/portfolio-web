@@ -12,8 +12,8 @@
         }
         header, footer {
             background-color: #f4f4f4;
-            padding: 10px 20px;
             text-align: center;
+            padding: 20px;
         }
         nav a {
             margin: 0 15px;
@@ -22,16 +22,17 @@
         }
         section {
             padding: 20px;
+            text-align: center;
         }
-        .back-to-top {
+        .navigation-top-bottom {
             display: block;
-            text-align: right;
-            margin-top: 20px;
+            margin: 20px auto;
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <header>
+    <header id="header">
         <h1>Bienvenue sur ma page web</h1>
         <nav>
             <a href="#accueil">Accueil</a>
@@ -43,26 +44,26 @@
     <section id="accueil">
         <h2>Accueil</h2>
         <p>Bienvenue sur la page d'accueil de mon site web.</p>
-        <a href="#footer" class="back-to-top">Bas</a>
+        <a href="#footer" class="navigation-top-bottom">Bas</a>
     </section>
 
     <section id="about">
         <h2>About</h2>
         <p>Voici une section pour partager des informations sur vous ou votre site.</p>
-        <a href="#footer" class="back-to-top">Bas</a>
-        <a href="#header" class="back-to-top">Retour en haut</a>
+        <a href="#footer" class="navigation-top-bottom">Bas</a>
+        <a href="#header" class="navigation-top-bottom">Retour en haut</a>
     </section>
 
     <section id="contact">
         <h2>Contact</h2>
         <p>Contactez-moi à l'adresse email : exemple@email.com.</p>
-        <a href="#footer" class="back-to-top">Bas</a>
-        <a href="#header" class="back-to-top">Retour en haut</a>
+        <a href="#footer" class="navigation-top-bottom">Bas</a>
+        <a href="#header" class="navigation-top-bottom">Retour en haut</a>
     </section>
 
     <footer id="footer">
         <p>&copy; 2025 Mon Site Web</p>
-        <a href="#header" class="back-to-top">Retour en haut</a>
+        <a href="#header" class="navigation-top-bottom">Retour en haut</a>
     </footer>
 </body>
 </html>

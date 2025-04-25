@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Portfolio avec Carrousel</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -33,14 +33,39 @@
             max-width: 800px;
             margin: 20px auto;
             padding: 20px;
+            text-align: center;
         }
-        .service, .resume-item {
-            margin-bottom: 20px;
-        }
-        .service img, .resume img {
+        .carousel {
+            position: relative;
             width: 100%;
-            height: auto;
-            border-radius: 5px;
+            max-width: 800px;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        .carousel img {
+            width: 100%;
+            display: none;
+        }
+        .carousel img.active {
+            display: block;
+        }
+        .carousel .prev, .carousel .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 2;
+        }
+        .carousel .prev {
+            left: 10px;
+        }
+        .carousel .next {
+            right: 10px;
         }
     </style>
 </head>
@@ -57,41 +82,42 @@
     </nav>
     <section id="home">
         <h2>Accueil</h2>
-        <p>Bienvenue sur mon portfolio où vous découvrirez mes travaux, services et compétences.</p>
+        <div class="carousel">
+            <img src="image1.jpg" alt="Image 1" class="active">
+            <img src="image2.jpg" alt="Image 2">
+            <img src="image3.jpg" alt="Image 3">
+            <button class="prev">&lt;</button>
+            <button class="next">&gt;</button>
+        </div>
     </section>
     <section id="about">
         <h2>À Propos</h2>
         <p>Je suis un professionnel passionné par le développement, la conception et l'innovation.</p>
     </section>
-    <section id="resume">
-        <h2>CV</h2>
-        <div class="resume-item">
-            <h3>Expérience professionnelle</h3>
-            <p>Développeur web chez XYZ, 2020 - présent.</p>
-        </div>
-        <div class="resume-item">
-            <h3>Éducation</h3>
-            <p>Master en Informatique, Université ABC, 2018.</p>
-        </div>
-    </section>
-    <section id="services">
-        <h2>Services</h2>
-        <div class="service">
-            <img src="service1.jpg" alt="Service 1">
-            <p>Développement de sites web personnalisés.</p>
-        </div>
-        <div class="service">
-            <img src="service2.jpg" alt="Service 2">
-            <p>Création de designs modernes et intuitifs.</p>
-        </div>
-    </section>
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email : votreemail@example.com</p>
-        <p>Téléphone : +123456789</p>
-    </section>
     <footer>
         <p>&copy; 2025 Mon Portfolio</p>
     </footer>
+    <script>
+        const images = document.querySelectorAll('.carousel img');
+        const prevButton = document.querySelector('.carousel .prev');
+        const nextButton = document.querySelector('.carousel .next');
+        let currentIndex = 0;
+
+        function showImage(index) {
+            images.forEach((img, i) => {
+                img.classList.toggle('active', i === index);
+            });
+        }
+
+        prevButton.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            showImage(currentIndex);
+        });
+
+        nextButton.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+        });
+    </script>
 </body>
 </html>

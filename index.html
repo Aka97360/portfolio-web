@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio avec Bouton Retour</title>
+    <title>Portfolio avec Retour vers le Haut</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -48,42 +48,10 @@
         .back-to-top:hover {
             background-color: #555;
         }
-        .carousel {
-            position: relative;
-            width: 100%;
-            max-width: 800px;
-            margin: auto;
-            overflow: hidden;
-            border-radius: 10px;
-        }
-        .carousel img {
-            width: 100%;
-            display: none;
-        }
-        .carousel img.active {
-            display: block;
-        }
-        .carousel .prev, .carousel .next {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            cursor: pointer;
-            padding: 10px;
-            z-index: 2;
-        }
-        .carousel .prev {
-            left: 10px;
-        }
-        .carousel .next {
-            right: 10px;
-        }
     </style>
 </head>
 <body>
-    <header>
+    <header id="top">
         <h1>Bienvenue sur Mon Portfolio</h1>
     </header>
     <nav>
@@ -95,18 +63,12 @@
     </nav>
     <section id="home">
         <h2>Accueil</h2>
-        <div class="carousel">
-            <img src="image1.jpg" alt="Image 1" class="active">
-            <img src="image2.jpg" alt="Image 2">
-            <img src="image3.jpg" alt="Image 3">
-            <button class="prev">&lt;</button>
-            <button class="next">&gt;</button>
-        </div>
+        <p>Bienvenue sur mon portfolio où vous découvrirez mes travaux et compétences.</p>
         <a href="#top" class="back-to-top">Retour vers le haut</a>
     </section>
     <section id="about">
         <h2>À Propos</h2>
-        <p>Je suis un professionnel passionné par le développement, la conception et l'innovation.</p>
+        <p>Je suis un passionné de développement et d'innovation.</p>
         <a href="#top" class="back-to-top">Retour vers le haut</a>
     </section>
     <section id="resume">
@@ -130,30 +92,8 @@
         <p>Téléphone : +123456789</p>
         <a href="#top" class="back-to-top">Retour vers le haut</a>
     </section>
-    <footer id="top">
+    <footer>
         <p>&copy; 2025 Mon Portfolio</p>
     </footer>
-    <script>
-        const images = document.querySelectorAll('.carousel img');
-        const prevButton = document.querySelector('.carousel .prev');
-        const nextButton = document.querySelector('.carousel .next');
-        let currentIndex = 0;
-
-        function showImage(index) {
-            images.forEach((img, i) => {
-                img.classList.toggle('active', i === index);
-            });
-        }
-
-        prevButton.addEventListener('click', () => {
-            currentIndex = (currentIndex - 1 + images.length) % images.length;
-            showImage(currentIndex);
-        });
-
-        nextButton.addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % images.length;
-            showImage(currentIndex);
-        });
-    </script>
 </body>
 </html>

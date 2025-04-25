@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio</title>
+    <title>Portfolio</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -12,51 +12,35 @@
             background-color: #f4f4f9;
             color: #333;
         }
-        header {
+        header, footer {
             text-align: center;
-            padding: 2em 0;
+            padding: 1em 0;
             background-color: #333;
             color: #fff;
         }
         nav {
             text-align: center;
+            background-color: #555;
             padding: 1em 0;
         }
         nav a {
-            margin: 0 10px;
-            color: #333;
+            margin: 0 15px;
+            color: #fff;
             text-decoration: none;
             font-weight: bold;
         }
         section {
             max-width: 800px;
             margin: 20px auto;
-            padding: 10px;
+            padding: 20px;
         }
-        .projects {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
+        .service, .resume-item {
+            margin-bottom: 20px;
         }
-        .project {
-            width: 45%;
-            margin: 10px 0;
-            padding: 10px;
-            border: 1px solid #ccc;
-            background-color: #fff;
-            text-align: center;
-        }
-        .project img {
+        .service img, .resume img {
             width: 100%;
             height: auto;
-            margin-bottom: 10px;
             border-radius: 5px;
-        }
-        footer {
-            text-align: center;
-            padding: 1em 0;
-            background-color: #333;
-            color: #fff;
         }
     </style>
 </head>
@@ -65,36 +49,15 @@
         <h1>Bienvenue sur Mon Portfolio</h1>
     </header>
     <nav>
+        <a href="#home">Accueil</a>
         <a href="#about">À Propos</a>
-        <a href="#projects">Projets</a>
+        <a href="#resume">CV</a>
+        <a href="#services">Services</a>
         <a href="#contact">Contact</a>
     </nav>
+    <section id="home">
+        <h2>Accueil</h2>
+        <p>Bienvenue sur mon portfolio où vous découvrirez mes travaux, services et compétences.</p>
+    </section>
     <section id="about">
-        <h2>À Propos de Moi</h2>
-        <p>Bonjour ! Je suis un créatif passionné par la conception et la réalisation de projets impressionnants.</p>
-    </section>
-    <section id="projects">
-        <h2>Mes Projets</h2>
-        <div class="projects">
-            <div class="project">
-                <h3>Projet 1</h3>
-                <img src="image1.jpg" alt="Aperçu du projet 1">
-                <p>Description rapide de ce projet incroyable.</p>
-            </div>
-            <div class="project">
-                <h3>Projet 2</h3>
-                <img src="image2.jpg" alt="Aperçu du projet 2">
-                <p>Description rapide d’un autre super projet.</p>
-            </div>
-        </div>
-    </section>
-    <section id="contact">
-        <h2>Contactez-moi</h2>
-        <p>Email : votreemail@example.com</p>
-        <p>Téléphone : +123456789</p>
-    </section>
-    <footer>
-        <p>Droit d'auteur &copy; 2025 Mon Portfolio</p>
-    </footer>
-</body>
-</html>
+        <h2>À Propos</h
